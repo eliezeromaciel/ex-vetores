@@ -1,0 +1,85 @@
+@import 'cores';
+
+* { 
+    margin: 0px;
+    padding: 0px;
+    font-size: 22px;
+}
+
+body {
+    display: flex;
+    background-color: $verde;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+
+    > .principal {       
+        display: flex;
+        gap: 10px;
+        padding: 10px ;          
+
+        > .card-exercicio {
+            background-color: $cinza-claro;
+            padding: 40px;
+            display: flex;
+            gap: 5px;
+           
+
+            > * {
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+                gap: 5px;
+                width: 0%;
+                flex-grow: 1;
+                box-sizing: content-box;
+                
+                > input {
+                    outline: none;
+                    border: solid $cinza-medio 3px;
+                    border-radius: 5px;
+                    padding: 10px;
+                }
+
+                > button {
+                    background-color: $cinza-escuro;
+                    border-radius: 5px;
+                    color: white;
+                    border: none;
+                    padding: 10px;
+                }
+            }
+
+            > .card-exercicio__entrada{
+                padding: 10px;
+                justify-content: space-evenly;
+                
+            }
+
+            > .card-exercicio__saida {
+                padding: 10px;
+                align-items: center;
+                background-color: $cinza-medio;
+                border-radius: 5px;
+                border: solid $cinza-escuro 2px;
+
+                > span {
+                    flex-grow: 1;
+
+                }
+
+            }
+        }
+    }
+}
+
+#retorno_ok {
+    display: none;
+    background-color: $verde;
+    display: none;
+}
+
+#retorno_false {
+    display: none;
+    background-color: $vermelho;
+}
